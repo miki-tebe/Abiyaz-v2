@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
     description:
         "A directory of Stars.",
     url: "https://abiyaz.web.app",
-    ogImage: "https://abiyaz.web.app/og.jpg",
+    ogImage: "https://abiyaz.web.app/og.png",
     links: {
         github: "https://github.com/miki-tebe/Abiyaz-v2",
     },
