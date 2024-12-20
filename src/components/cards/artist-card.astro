@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"artists">;
+
+const artist = Astro.props;
+---
+
+<article class="group space-y-4">
+    <div>
+        <a href={`/artists/${artist.id}/`} class="group-hover:underline">
+            <h2
+                class="font-heading text-xl md:text-2xl leading-snug line-clamp-3"
+                transition:name={`name-${artist.data.name}`}
+            >
+                {artist.data.name}
+            </h2>
+        </a>
+    </div>
+</article>

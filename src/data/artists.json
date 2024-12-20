@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Rophnan",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC2s9j9EMXMFklxGqDPJp-qQ"
+    },
+    {
+        "id": 2,
+        "name": "Sami Dan",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCIvkZCVQH2rGoP0noRoqp_Q"
+    },
+    {
+        "id": 3,
+        "name": "Yohana ዮሐና",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC23cXd2R32eG7IkBnvPN4Fg"
+    },
+    {
+        "id": 4,
+        "name": "AWTAR TV",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCBWvYkCV0S7RTQRh4KBn-oA"
+    },
+    {
+        "id": 5,
+        "name": "Hewan Music",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCaSKVqDmHLJB_OwczT4MOuw"
+    }
+]

@@ -1,0 +1,39 @@
+---
+import { cn } from "@/lib/utils";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { YouTube } from "@astro-community/astro-embed-youtube";
+
+export async function getStaticPaths() {
+    const artists = await getCollection("artists");
+    return artists.map((artist) => ({
+        params: {
+            id: artist.data.id,
+        },
+        props: artist,
+    }));
+}
+const artist = Astro.props;
+const videos = await getCollection(artist?.data.name);
+---
+
+<Layout title={artist.data.name} description={`${artist.data.name} Page`}>
+    <div class="relative container max-w-screen-md py-10">
+        <button
+            onclick="history.back()"
+            class="absolute left-[-200px] top-10 hidden xl:inline-flex text-muted-foreground"
+            transition:animate="slide"
+        >
+            Back
+        </button>
+        <h1
+            class="font-heading text-4xl my-4"
+            transition:name={`name-${artist.data.name}`}
+        >
+            {artist.data.name}
+        </h1>
+        <ul>
+            {videos.map((video) => <YouTube id={video.data.link} />)}
+        </ul>
+    </div>
+</Layout>

@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import ArtistCard from "@/components/cards/artist-card.astro";
+const artists = await getCollection("artists");
+---
+
+<Layout title="">
+	<section class="container py-10">
+		<h1 class="inline-block font-heading text-4xl">Artists</h1>
+
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-9 md:gap-y-11 lg:gap-y-16 lg:gap-x-8"
+		>
+			{artists.map((post) => <ArtistCard {...post} />)}
+		</div>
+	</section>
+</Layout>
